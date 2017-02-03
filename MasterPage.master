@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="App_Themes/Default_Blue/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="App_Themes/Default_Blue/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body style="background-color:#bababa; background: url('App_Themes/Default_Blue/images/seigaiha.png')">
+    <form id="form1" runat="server">
+        <div class="jumbotron" style="text-align: center; background-image: url('App_Themes/Default_Blue/images/jumbo_background.jpg'); background-size: cover">
+            <asp:Image CssClass="img-circle" ImageUrl="App_Themes/Default_Blue/images/me.png" runat="server" />
+            <p class="display-1" style="color: white; text-shadow: 0 0 3px #000000; font-size: 2em">Alex Bourdain</p>
+            <p class="display-2" style="color: white; text-shadow: 0 0 3px #000000; font-size: 1em;">Programmer & Server Admin</p>
+            <button type="button" class="btn btn-primary" style="margin: 0px 0px -25px 0px;">Download CV</button>
+            <a href="https://www.linkedin.com/in/alexbourdain/"><button type="button" class="btn btn-primary" style="margin: 0px 0px -25px 0px;">Linkedin profile</button></a>
+        </div>
+
+        <nav class="navbar navbar-inverse" style="margin-top: -33px">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.aspx">About me</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="unity_proj.aspx">Unity Labyrinth</a></li>
+                            <li><a href="marketplace.aspx">Marketplace Website</a></li>
+                            <li><a href="photography.aspx">Photography</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="education.aspx">Education</a></li>
+                    <li><a href="skills.aspx">Skills</a></li>
+                    <li><a href="contacts.aspx">Contacts</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
